@@ -3,7 +3,13 @@
 one:
   name: MyString
   email: MyString
+  password: MyString
+  longitude: 9.99
+  latitude: 9.99
 
 two:
   name: MyString
   email: MyString
+  password: MyString
+  longitude: 9.99
+  latitude: 9.99
