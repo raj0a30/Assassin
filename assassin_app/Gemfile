@@ -14,8 +14,14 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-# Google Authentication
-gem "omniauth-google-oauth2", "~> 0.2.5"
+# Google Authentication Stuff from website example
+gem 'omniauth-google-oauth2'
+gem 'omniauth', '~> 1.2.2'
+gem 'json'
+
+# Google API Client Gem
+gem 'google-api-client', :require => 'google/api_client'
+
 
 gem 'signet', '~> 0.5.1'
 

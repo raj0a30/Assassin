@@ -1,18 +1,25 @@
 Rails.application.routes.draw do
-  resources :users
+  #resources :games
 
-  root 'home#index'
+  #resources :teams
+
+  #resources :users
+
+  #root 'home#index'
 
   # match '/signup', to: 'users#new', via: 'get'
 
 # Google Auth Example Stuff
-  get'auth/:provider/callback', to: 'sessions#create'
-  get 'auth/failure', to: redirect('/')
-  get 'signout', to: 'sessions#destroy', as: 'signout'
+  #get'auth/:provider/callback', to: 'sessions#create'
+  #get 'auth/failure', to: redirect('/')
+  #get 'signout', to: 'sessions#destroy', as: 'signout'
   
-  resources :sessions, only: [:create, :destroy]
+  #resources :sessions, only: [:create, :destroy]
   # resource :home, only: [:show]
   
+  root to: 'sessions#new'
+  resources :sessions, only: :index
+  get "/auth/:provider/callback" => 'sessions#create'
 
 
 
